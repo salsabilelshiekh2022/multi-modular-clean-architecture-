@@ -19,11 +19,11 @@ class ProdAppSettingsProviderImpl implements AppSettingsProvider {
 class DevAppSettingsProviderImpl implements AppSettingsProvider {
   @override
   String getAppLanguage() {
-    return "English";
+    return "Arabic";
   }
 
   @override
   String getAppTheme() {
-    return "Dark";
+    return "light";
   }
 }
