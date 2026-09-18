@@ -38,6 +38,6 @@ melos:
     update-deps:
       run: melos exec -- flutter pub upgrade
     test:
-      run: melos exec -- flutter test  
+      run: melos exec --concurrency=1 -- flutter test  
         
 
