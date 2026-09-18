@@ -24,12 +24,18 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   dio: ^5.11.1
+  injectable: ^3.0.0
+  get_it: ^9.2.1
+  app_settings: 
+    path: features/settings/app_settings
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
   melos: ^8.7.0
+  build_runner: ^2.15.1
+  injectable_generator: ^3.0.2
 
 melos:
   scripts:
