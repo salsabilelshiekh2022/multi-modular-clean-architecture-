@@ -13,6 +13,8 @@ dependencies:
   dio: ^5.11.1
   data:
     path: ../../../core/data
+  data_source:
+   path: ../../../core/data_source  
   flutter:
     sdk: flutter
   get_it: ^9.2.1
