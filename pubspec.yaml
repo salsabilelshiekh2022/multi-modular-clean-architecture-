@@ -10,6 +10,7 @@ environment:
 workspace:
   - core/data
   - core/domain
+  - core/data_source
   - core/presentation
   - features/settings/app_settings
   - features/settings/profile
@@ -28,6 +29,8 @@ dependencies:
   get_it: ^9.2.1
   app_settings: 
     path: features/settings/app_settings
+  data_source:
+    path: core/data_source
 
 dev_dependencies:
   flutter_test:

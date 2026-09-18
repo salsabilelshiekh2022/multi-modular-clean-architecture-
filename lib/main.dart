@@ -1,4 +1,5 @@
 import 'package:app_settings/provider/app_settings_provider.dart';
+import 'package:data_source/provider/session_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
@@ -35,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final appSettingsProvider = getIt<AppSettingsProvider>();
+    final sessionProvider = getIt<SessionProvider>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -46,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Text('App Language: ${appSettingsProvider.getAppLanguage()}'),
             Text('App Theme: ${appSettingsProvider.getAppTheme()}'),
+            Text('Client ID: ${sessionProvider.getClientID()}'),
           ],
         ),
       ),
