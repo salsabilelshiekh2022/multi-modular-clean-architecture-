@@ -16,6 +16,7 @@ dependencies:
   injectable: ^3.0.0
   json_annotation: ^4.12.0
   pretty_dio_logger: ^1.4.0
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:

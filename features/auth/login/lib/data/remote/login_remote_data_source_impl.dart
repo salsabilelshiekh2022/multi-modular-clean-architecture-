@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:data/network/api_call_save.dart';
+import 'package:data/network/network_info.dart';
 import 'package:domain/models/failure.dart';
 
 import '../requst/login_request.dart';
@@ -9,14 +10,15 @@ import 'login_remote_data_source.dart';
 
 class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
   final LoginService loginService;
+  final NetworkInfo networkInfo;
 
-  LoginRemoteDataSourceImpl(this.loginService);
+  LoginRemoteDataSourceImpl(this.loginService, this.networkInfo);
 
   @override
   Future<Either<Failure, LoginResponse>> login(
     LoginRequest loginRequest,
   ) async {
-    return await safeApiCall(() async {
+    return await safeApiCall(networkInfo, () async {
       final response = await loginService.login(
         loginRequest.email,
         loginRequest.password,
