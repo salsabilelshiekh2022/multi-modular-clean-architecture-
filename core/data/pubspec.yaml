@@ -2,6 +2,7 @@ name: data
 resolution: workspace
 description: "A new Flutter package project."
 version: 0.0.1
+publish_to: none
 homepage:
 
 environment:
@@ -16,6 +17,9 @@ dependencies:
   injectable: ^3.0.0
   json_annotation: ^4.12.0
   pretty_dio_logger: ^1.4.0
+  dartz: ^0.10.1
+  domain:
+   path: ../../core/domain
 
 dev_dependencies:
   flutter_test:
